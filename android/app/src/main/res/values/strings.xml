@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">homelesshelpers</string>
+    <string name="title_activity_main">homelesshelpers</string>
+    <string name="package_name">ionic.homelesshelpers</string>
+    <string name="custom_url_scheme">ionic.homelesshelpers</string>
+</resources>

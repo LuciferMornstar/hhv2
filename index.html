@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homeless Helpers UK - Mental Health Support &amp; Service Dog Assistance</title>
+    <meta name="description" content="Immediate support for homeless individuals in the UK with focus on mental health services, service dog assistance, and resources based on British law.">
+    <meta name="keywords" content="homeless support, mental health homeless, UK homelessness, assistance dogs, service dogs, homeless resources, British law, homeless help">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/icons/favicon-96x96.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="/icons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/icons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/icons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/icons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/icons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/icons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/icons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/icons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/icons/android-icon-192x192.png">
+    <link rel="manifest" href="/icons/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/icons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Homeless Helpers UK - Mental Health Support &amp; Service Dog Assistance">
+    <meta property="og:description" content="Immediate support for homeless individuals in the UK with focus on mental health services, service dog assistance, and resources based on British law.">
+    <meta property="og:image" content="/logo.png">
+    <meta property="og:url" content="https://homeless.website">
+    <meta property="og:type" content="website">
+    
+    <!-- Accessibility Enhancements -->
+    <meta name="color-scheme" content="light dark">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Atkinson Hyperlegible', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .wrapper {
+            width: 90%;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        .header {
+            background: #35424a;
+            color: #ffffff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        .header .tagline {
+            font-style: italic;
+            margin: 10px 0;
+        }
+        .accessibility-controls {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        .accessibility-btn {
+            background: #ffffff;
+            border: none;
+            color: #35424a;
+            cursor: pointer;
+            font-size: 1.2em;
+            margin-left: 10px;
+            padding: 5px 10px;
+        }
+        .skip-link {
+            position: absolute;
+            left: -9999px;
+        }
+        .skip-link:focus {
+            left: 10px;
+            top: 10px;
+            z-index: 1000;
+        }
+        .fade-in {
+            animation: fadeIn 0.5s;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        .btn-group {
+            margin: 20px 0;
+        }
+        .button {
+            background: #35424a;
+            color: #ffffff;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .button.secondary {
+            background: #e8491d;
+        }
+        .button.mental-health {
+            background: #008cba;
+        }
+        .help-bubble {
+            cursor: help;
+            border-bottom: 1px dotted;
+        }
+        .help-bubble:hover::after {
+            content: attr(data-help);
+            position: absolute;
+            background: #35424a;
+            color: #ffffff;
+            padding: 5px;
+            border-radius: 5px;
+            white-space: nowrap;
+        }
+        .loader {
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top: 4px solid #ffffff;
+            width: 30px;
+            height: 30px;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .emergency-help {
+            background: #ffdddd;
+            padding: 15px;
+            border: 1px solid #ffcccc;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .shelter-availability {
+            background: #ffffff;
+            padding: 15px;
+            border: 1px solid #dddddd;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .shelter-availability-header h2 {
+            margin: 0;
+        }
+        .shelter-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 10px;
+        }
+        .shelter-item {
+            background: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .shelter-loading {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .shelter-error {
+            color: #e8491d;
+            text-align: center;
+            margin: 20px 0;
+        }
+        .data-refresh-button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #35424a;
+            font-size: 1.5em;
+        }
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background: #ffffff;
+            padding: 15px;
+            border: 1px solid #dddddd;
+            border-radius: 5px;
+            transition: transform 0.2s;
+        }
+        .card:hover {
+            transform: scale(1.02);
+        }
+        .mental-health {
+            background: #e7f3fe;
+        }
+        .service-dog {
+            background: #fff3cd;
+        }
+        .slide-up {
+            animation: slideUp 0.5s forwards;
+            opacity: 0;
+        }
+        @keyframes slideUp {
+            0% {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const increaseFontBtn = document.getElementById('increase-font');
+            const decreaseFontBtn = document.getElementById('decrease-font');
+            const simpleModeToggle = document.getElementById('simple-mode');
+            const body = document.body;
+            
+            increaseFontBtn.addEventListener('click', function () {
+                const currentSize = parseFloat(window.getComputedStyle(body).fontSize);
+                body.style.fontSize = (currentSize + 0.1) + 'em';
+            });
+            
+            decreaseFontBtn.addEventListener('click', function () {
+                const currentSize = parseFloat(window.getComputedStyle(body).fontSize);
+                body.style.fontSize = (currentSize - 0.1) + 'em';
+            });
+            
+            simpleModeToggle.addEventListener('change', function () {
+                if (this.checked) {
+                    body.classList.add('simple-mode');
+                } else {
+                    body.classList.remove('simple-mode');
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to content</a>
+    
+    <div class="wrapper">
+        <div class="container fade-in">
+            <main id="main-content">
+                <header class="header">
+                    <div class="accessibility-controls">
+                        <button id="increase-font" class="accessibility-btn" aria-label="Increase font size">A+</button>
+                        <button id="decrease-font" class="accessibility-btn" aria-label="Decrease font size">A-</button>
+                    </div>
+                    
+                    <img src="/logo.png" alt="Homeless Helpers UK Logo" class="logo">
+                    <h1>Homeless Helpers UK</h1>
+                    <p class="tagline">Mental Health Support &amp; Service Dog Assistance</p>
+                    
+                    <div class="simple-mode-toggle">
+                        <label for="simple-mode">
+                            <input type="checkbox" id="simple-mode">
+                            <span>Enable Simple Mode</span>
+                            <span class="help-bubble" data-help="Simple mode makes the page easier to read with larger text and simpler layout. Ideal for users who prefer a more straightforward experience.">?</span>
+                        </label>
+                    </div>
+                </header>
+                
+                <div id="redirectMessage" style="display: none; text-align: center; margin: 20px 0;">
+                    <p>Redirecting to the main website...</p>
+                    <div id="loader" class="loader" style="display: none;"></div>
+                </div>
+                
+                <div class="emergency-help">
+                    <h2>Need Immediate Help?</h2>
+                    <p>If you are in immediate danger or need emergency assistance, please call:</p>
+                    <div class="btn-group">
+                        <a href="tel:999" class="button emergency">Call 999 (Emergency)</a>
+                        <a href="tel:+447853811172" class="button">Call Our Helpline</a>
+                    </div>
+                </div>
+                
+                <div class="shelter-availability">
+                    <div class="shelter-availability-header">
+                        <h2>Emergency Shelter Availability</h2>
+                    </div>
+                    <div class="shelter-availability-content">
+                        <p>Find available emergency shelter beds in your area:</p>
+                        
+                        <div class="shelter-grid" id="shelter-data">
+                            <!-- Shelter data will be loaded here from the database -->
+                        </div>
+                        
+                        <div id="shelter-loading" class="shelter-loading">
+                            <div class="loader" style="display: block;"></div>
+                            <p>Loading shelter availability...</p>
+                        </div>
+                        
+                        <div id="shelter-error" class="shelter-error" style="display: none;">
+                            <p>Unable to load shelter data. Please try again later.</p>
+                        </div>
+                        
+                        <button id="refresh-shelter-data" class="data-refresh-button">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 4v6h-6"></path><path d="M1 20v-6h6"></path><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10"></path><path d="M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path></svg>
+                            Refresh Data
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="card-grid">
+                    <div class="card mental-health slide-up" style="animation-delay: 0.1s;">
+                        <h2>Mental Health Support</h2>
+                        <div class="card-content">
+                            <p>Access free mental health services designed specifically for those experiencing homelessness:</p>
+                            <ul>
+                                <li>Crisis intervention and emergency mental health support</li>
+                                <li>Trauma-informed counselling with specialists</li>
+                                <li>Depression, anxiety, and PTSD support groups</li>
+                                <li>Medication management and assistance</li>
+                                <li>Connection to NHS mental health services</li>
+                            </ul>
+                        </div>
+                        <div class="btn-group">
+                            <a href="/mental-health" class="button mental-health">Find Support</a>
+                            <a href="/emergency" class="button secondary">Crisis Resources</a>
+                        </div>
+                    </div>
+                    
+                    <div class="card service-dog slide-up" style="animation-delay: 0.2s;">
+                        <h2>Service Dog Assistance</h2>
+                        <div class="card-content">
+                            <p>Our service dog program provides trained companions to support those experiencing homelessness:</p>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+</html>

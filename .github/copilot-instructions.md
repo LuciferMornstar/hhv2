@@ -1,0 +1,18 @@
+- make all code to best of your abilities and aim for better than a human ever could make
+- Always check your work
+- All information is based on British law
+- the goal of this project is to create the most amazing and beautiful and fully functioning react app possible
+- This will be uploaded to an ionos webspace
+- Access to the database is via the website/presence only
+Please always establish the connection to your database via your website/presence. For security reasons, it is not possible to access the database directly, for example via your local computer (external ODBC connection). To protect your data, your database is located on a dedicated database server that is protected by a firewall.
+- This is a set of rules we'll call HHR from now on:
+- 1: The main goal is to help the homeless
+- 2: focus on mental health while homeless
+- 3: use your best abilities to expand any sections that you can
+- 4: Make sure to include the service dogs where appropriate
+- 5: make any new sections as needed for any new information
+- 6: Make sure to use the database and make full use of it, use database-details.txt for table and column information
+- 7: Make the content both easy to understand and use by people with a low IQ (under 60iq) and people with a high IQ (Above 140iq), both must be catered for
+- Always follow these rules unless given the command NHNH 
+- use these contact details in the correct places "helpme@homeless.website" "dogs@homeless.website" "volunteer@homeless.website" "info@homeless.website" Phone, text, imessage and whatsapp "+447853811172" Facebook - 'www.facebook.com/homelesshelpuk'
+- inform me what changes you will make and then make changes and improvements without constant confirmation but do not remove content without consent 
