@@ -20,7 +20,7 @@
 import colors from "assets/theme/base/colors";
 
 // Vision UI Dashboard React helper functions
-import rgba from "assets/theme/functions/rgba";
+import rgba from "../functions/rgba";
 import pxToRem from "assets/theme/functions/pxToRem";
 
 const { dark, transparent, white, info } = colors;

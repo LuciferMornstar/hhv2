@@ -50,12 +50,7 @@ import {
 } from "examples/Navbars/DashboardNavbar/styles";
 
 // Vision UI Dashboard React context
-import {
-  useVisionUIController,
-  setTransparentNavbar,
-  setMiniSidenav,
-  setOpenConfigurator,
-} from "context";
+import { useVisionUIController } from "appContext/index";
 
 // Images
 import team2 from "assets/images/team-2.jpg";

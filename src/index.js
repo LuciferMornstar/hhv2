@@ -22,7 +22,7 @@ import { BrowserRouter } from "react-router-dom";
 import App from "./App";
 
 // Vision UI Dashboard React Context Provider
-import { VisionUIControllerProvider } from "context";
+import { VisionUIControllerProvider } from "appContext/index";
 
 const rootElement = document.getElementById('root');
 const root = createRoot(rootElement);

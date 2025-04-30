@@ -18,7 +18,7 @@
 
 // Vision UI Dashboard React base styles
 import borders from "assets/theme/base/borders";
-import colors from "assets/theme/base/colors";
+import colors from "../base/colors";
 
 // Vision UI Dashboard React helper functions
 import pxToRem from "assets/theme/functions/pxToRem";

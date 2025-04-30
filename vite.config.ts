@@ -14,5 +14,13 @@ export default defineConfig({
     globals: true,
     environment: 'jsdom',
     setupFiles: './src/setupTests.ts',
-  }
+  },
+  build: {
+    rollupOptions: {
+      input: {
+        main: './index.html',
+      },
+      external: ['uitheme'],
+    },
+  },
 })

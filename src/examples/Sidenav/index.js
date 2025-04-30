@@ -44,7 +44,7 @@ import SidenavRoot from "examples/Sidenav/SidenavRoot";
 import sidenavLogoLabel from "examples/Sidenav/styles/sidenav";
 
 // Vision UI Dashboard React context
-import { useVisionUIController, setMiniSidenav, setTransparentSidenav } from "context";
+import { useVisionUIController, setMiniSidenav, setTransparentSidenav } from "appContext/index";
 
 // Vision UI Dashboard React icons
 import SimmmpleLogo from "examples/Icons/SimmmpleLogo";
